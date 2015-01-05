@@ -11,8 +11,5 @@ This layer depends on:
 
 URI: git://git.openembedded.org/bitbake
 
-URI: git://git.openembedded.org/openembedded-core
+URI: git://git.openembedded.org/meta-openembedded
 layers: meta
-
-URI: git://git.yoctoproject.org/meta-ti.git
-branch: dora
