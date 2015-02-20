@@ -21,16 +21,11 @@ FILES_${PN} = "/lib/firmware/ti-connectivity/*"
 ALLOW_EMPTY_${PN} = "1"
 
 
-#WORKDIR
-#DEST_DIR
-#FILES_${PN} = "/lib/firmware/ti-connectivity/*"
-#DEPLOY_DIR_IMAGE
-
 # Copy script to the deploy area with u-boot, uImage, and rootfs
-#do_deploy () {
-#   install -d ${DEPLOY_DIR_IMAGE}/lib/firmware/ti-connectivity
-#   install -m 0755 ${WORKDIR}/*.bin ${DEPLOY_DIR_IMAGE}/lib/firmware/ti-connectivity
-#}
+do_deploy () {
+   install -d ${DEPLOY_DIR_IMAGE}/lib/firmware/ti-connectivity
+   install -m 0755 ${WORKDIR}/*.bin ${DEPLOY_DIR_IMAGE}/lib/firmware/ti-connectivity
+}
 
 do_install_append () {
    install -d ${D}${base_libdir}/firmware/ti-connectivity
